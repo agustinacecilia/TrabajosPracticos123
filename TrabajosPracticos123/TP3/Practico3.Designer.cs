@@ -112,6 +112,7 @@
             this.TTelefono.Name = "TTelefono";
             this.TTelefono.Size = new System.Drawing.Size(100, 20);
             this.TTelefono.TabIndex = 14;
+            this.TTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TTelefono_KeyPress);
             // 
             // LTarjeta
             // 
@@ -285,7 +286,6 @@
             this.Controls.Add(this.BGuardar);
             this.Controls.Add(this.panel1);
             this.Name = "Practico3";
-            this.Text = "Pequeño Formulario";
             this.Load += new System.EventHandler(this.Practico3_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

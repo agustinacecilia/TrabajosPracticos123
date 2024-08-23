@@ -170,5 +170,19 @@ namespace TrabajosPracticos123.TP3
         {
 
         }
+
+        private void TTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            // Verifica si el carácter no es un número y no es una tecla de control (ej. Backspace)
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                // Muestra un MessageBox de alerta
+                MessageBox.Show("Solo puede ingresar números.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                // Cancela el evento KeyPress para evitar que el carácter se ingrese en el TextBox
+                e.Handled = true;
+            }
+        }
     }
 }
